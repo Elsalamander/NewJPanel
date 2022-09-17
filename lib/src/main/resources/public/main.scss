@@ -1,0 +1,355 @@
+/*
+* Roboto Font Definitions
+*/
+@import 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono';
+
+@import 'vars';
+@import 'custom';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100vh;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.nav-wrapper {
+    max-height: 48px;
+}
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    line-height: 48px;
+}
+
+nav {
+    height: 48px;
+    width: 100%;
+    background-color: $primary-color;
+}
+
+.button-collapse {
+    height: 48px;
+    width: 36px;
+    margin-right: 16px;
+}
+
+nav a {
+    color: #fff;
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    line-height: 48px !important;
+}
+
+nav a i {
+    margin-left: 6px;
+    margin-right: 6px;
+    display: inline;
+    font-size: 2rem !important;
+    margin-left: 15px;
+}
+
+.right {
+    float: right;
+}
+
+.button-collapse i {
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+.brand-logo {
+    height: 48px;
+    font-size: 32px;
+    line-height: 48px;
+    text-decoration: none;
+    position: absolute;
+}
+
+.side-nav {
+    display: none;
+}
+
+nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        list-style-type: none;
+        display: inline;
+        float: left;
+        margin-left: 5px;
+        padding: 0;
+    }
+
+    /*Hide dropdown links until they are needed*/
+    li .dropdown-content {
+        min-height: 48px;
+        display: none;
+
+        position: absolute;
+
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        background-color: #eee;
+    }
+
+    /*Make dropdown links vertical*/
+    .dropdown-content a {
+        display: block;
+        float: none;
+
+        width: auto;
+        min-width: 100px;
+        padding: 0 5px;
+
+        text-align: center;
+
+        color: #222;
+        margin-left: 5px;
+        line-height: 36px;
+        text-decoration: none;;
+    }
+
+    /*Display the dropdown on hover*/
+    .dropdown-button:hover .dropdown-content {
+        display: block;
+    }
+
+}
+
+.input-field {
+    padding-bottom: 5px;
+
+    label {
+        display: block;
+        font-weight: bold;
+    }
+
+    input {
+        font-size: 110%;
+        width: 80%;
+
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    .rich-input {
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 3px #ddd;
+        border-radius: 4px;
+    }
+
+    input.rich-input:hover {
+        border: 1px solid #aaa;
+    }
+
+    input.rich-input:focus {
+        box-shadow: inset 0 1px 3px $accent-color;
+    }
+}
+
+button, .btn {
+    font-size: 110%;
+
+    background-color: $accent-color;
+    color: $primary-color-text;
+
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 100px;
+}
+
+.page-content, .sidebar {
+    float: left;
+    padding: 0.5em;
+}
+
+.page-content {
+    width: calc(75% - 1em);
+}
+
+.sidebar {
+    width: calc(25% - 1em);
+}
+
+#cmd_form  .input-field {
+    position: relative;
+    margin-top: 0rem;
+    background-color: $term-background;
+    color: #fff;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+#term {
+    height: 100vh;
+    background: #111;
+    color: #fff;
+    word-wrap: break-word;
+    overflow: auto;
+    max-height: calc(100vh - 250px);
+}
+
+.input-field i {
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 46px;
+}
+
+#cmd_box {
+    margin: 0;
+    background: none;
+    border: 0;
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+}
+
+.term_line {
+    margin: 0;
+    font-family: "Roboto Mono", Consolas, Monaco, monospace;
+    font-size: 14px;
+}
+
+progress {
+    width: 100%;
+}
+
+.nano { background: $term-background; width: 100%; height: 500px; }
+.nano .nano-content { padding: 10px; }
+.nano .nano-pane   { background: $term-background; }
+.nano .nano-slider { background: $term-background; }
+
+footer {
+    background-color: $primary-color-dark;
+    color: $primary-color-text;
+    padding: 5px;
+}
+
+footer a {
+    color: $primary-color-text;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/*Style for dropdown links*/
+li:hover ul a {
+    color: #2f3036;
+    height: 48px;
+    line-height: 48px;
+}
+
+#error-bar {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 1.4em;
+    padding: 5px;
+    text-align: center;
+    display: none;
+}
+
+.collection {
+    height: calc(100vh - 144px);
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.collection-item {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 300px;
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid #ddd;
+}
+
+.material-icons {
+    height: auto !important;
+    padding-left: 0px !important;
+}
+
+.material-icons {
+    position: relative;
+    width: 42px;
+    overflow: hidden;
+    left: 0px !important;
+    vertical-align: middle;
+    font-size: 24px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    ul {
+        position: static;
+        display: none;
+    }
+
+    li {
+        margin-bottom: 1px;
+    }
+
+    ul li, li a {
+        width: 100%;
+    }
+
+    .page-content {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 80%;
+    }
+}

@@ -1,0 +1,20 @@
+name: JPanel
+version: 1.0-Beta8
+description: Adds a web panel to a minecraft server.
+author: Elsalamander
+load: STARTUP
+api-version: 1.19
+
+main: it.elsalamander.jpanel.JPanelSpigot
+softdepend: [Vault]
+
+commands:
+  jpanel:
+    description: Information about the current JPanel install
+    usage: /<command>
+  addlogin:
+    description: Adds a user to jPanel
+    usage: /<command> [username] [password]
+  passwd:
+    description: Change the password for a JPanel user
+    usage: /<command> [username] [oldpassword] [newpassword]
